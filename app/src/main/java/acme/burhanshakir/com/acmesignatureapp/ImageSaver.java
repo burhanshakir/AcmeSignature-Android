@@ -27,7 +27,7 @@ class ImageSaver {
         FileOutputStream fileOutputStream = null;
         try {
             fileOutputStream = new FileOutputStream(createFile());
-            bitmapImage.compress(Bitmap.CompressFormat.PNG, 100, fileOutputStream);
+            bitmapImage.compress(Bitmap.CompressFormat.JPEG, 100, fileOutputStream);
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
@@ -73,7 +73,7 @@ class ImageSaver {
             if(!file.exists()){
                 file.mkdirs();
             }
-            f = new File(file.getAbsolutePath()+file.separator+ "signature"+".png");
+            f = new File(file.getAbsolutePath()+file.separator+ "signature"+".jpg");
         }
 
         return f;
